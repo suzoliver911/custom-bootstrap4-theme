@@ -1,0 +1,9 @@
+$grid-bg: $white;
+$grid-text: $text-default;
+$grid-border: darken($color-neutrals-light-grey, 4%);
+
+$grid-header-bg: map-get($theme-colors, 'primary');
+$grid-header-text: $white;
+$grid-header-border: $color-neutrals-light-grey;
+
+$grid-alt-bg: $color-neutrals-light-grey;

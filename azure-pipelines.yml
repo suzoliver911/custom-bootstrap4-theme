@@ -1,0 +1,26 @@
+# Node.js
+# Build a general Node.js project with npm.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: Npm@1
+  inputs:
+    command: 'install'
+
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    customCommand: 'run build'
+
+- task: Npm@1
+  inputs:
+    command: 'publish'
+    publishRegistry: 'useFeed'
+    publishFeed: '2de02efe-08cb-4684-8a93-115cb87353b3'

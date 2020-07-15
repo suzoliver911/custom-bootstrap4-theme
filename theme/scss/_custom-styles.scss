@@ -1,0 +1,56 @@
+// Add additional styles here.
+
+// For example, overwrite certain styles or add new components.
+
+// TIP: You can use bootstrap's powerful mixins here!
+
+.alert-danger {
+  @include alert-variant(#ffdddd, #dc3545, #333);
+}
+
+.alert-warning {
+  @include alert-variant(#fff3cd, #ffc107, #333);
+}
+
+.alert-info {
+  @include alert-variant(#cce5ff, #004085, #333);
+}
+
+.alert-success {
+  @include alert-variant(#d4edda, #155724, #333);
+}
+
+.alert-primary {
+  @include alert-variant(#d5e2f5, #2f6ecc, #333);
+}
+
+.alert-secondary {
+  @include alert-variant(#e2e3e5, #383d41, #333);
+}
+
+.alert-light {
+  @include alert-variant(#fefefe, #818182, #333);
+}
+
+.alert-dark {
+  @include alert-variant(#d6d6d6, #333, #333);
+}
+
+@each $color, $value in $theme-colors {
+  .alert-#{$color} {
+    border-width: 2px;
+  }
+}
+
+// Example: Puts properly colored box shadow on alerts
+// @each $color, $value in $theme-colors {
+//   .alert-#{$color} {
+//     box-shadow: 3px 3px theme-color-level($color, -3);
+//   }
+// }
+
+// TODO: Put General Message Styles here
+
+// TODO: Put Banner Notification styles here
+
+// TODO:  Split out into components and import here
